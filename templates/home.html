@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<style>
+    form {
+        width: 600px;
+        margin: auto;
+    }
+
+    form > * {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+</style>
+{% endblock %}
+
+{% block main_content %}
+    <h1>My URL shortener</h1>
+    <hr>
+    <form action="/shorten_url" method="post">
+        <input 
+            type="text"
+            name="url"
+            class="form-control"
+            placeholder="Ievadi URL">
+        <input 
+            type="submit"
+            class="btn btn-primary" 
+            value="Saīsināt">
+        </form>
+{% endblock %}
